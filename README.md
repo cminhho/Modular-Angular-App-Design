@@ -88,7 +88,7 @@ angular.module(‘module.home’, []) //define your module
         $stateProvider
           .state(‘/home’, {
             templateUrl: ‘modules/home/views/home.html’,
-            controller: ';HomeCtrl’
+            controller: 'HomeCtrl’
           })
    // ...
 ```
