@@ -61,6 +61,46 @@ angular.module('ClearOneApp', [
 
 ```
 
+Creating a ClearOneApp Modules allows us to inject all our other modules which in turn allows each of our other modules to access each other
+The ClearOneApp also allows us to do routing and use ui-view in our index.html file:
+
+```sh
+<!DOCTYPE HTML>
+<html lang="en-US" data-ng-app="ClearOneApp">
+<head>
+  <meta charset="UTF-8">
+  <title>ClearOne App</title>
+</head>
+<body data-ng-controller="MainCtrl">
+    <div ui-view></div>
+</body>
+</html>
+```
+
+Then you defined your routes on the other modules
+
+```sh
+// src/modules/home/config.js
+angular.module(‘module.home’, []) //define your module
+  .config(
+    [‘$stateProvider’,
+      function($stateProvider) {
+        $stateProvider
+          .state(‘/home’, {
+            templateUrl: ‘modules/home/views/home.html’,
+            controller: ';HomeCtrl’
+          })
+   // ...
+```
+
 ### Implementing Your Modules
 
 Now when we go to add a controller/directive/service/filter to a module, we open up the appropriate file within that module and simply use the appropriate module name when we define it.
+
+```sh
+// app/modules/home/controllers.js
+angular.module(‘module.home’)
+  .controller(‘HomeCtrl’, function($scope) {
+     $scope.patients = ‘something’;
+  });
+```
