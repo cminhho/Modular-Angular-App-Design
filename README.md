@@ -5,28 +5,36 @@
 Each module then has its own sub-directory and a file for directives, controllers, filters and services and a directory for views
 #### The meaning of files and folders are as follows:
 ```
-ng-boilerplate/
-  |- grunt-tasks/
-  |- karma/
+your-project/
+  |- doc/
+  |- node_modules/
+  |- test/
   |- src/
-  |  |- app/
-  |  |  |- <app logic>
   |  |- assets/
   |  |  |- <static files>
   |  |- common/
   |  |  |- <reusable code>
-  |  |- less/
-  |  |  |- main.less
-  |- vendor/
+  |  |- modules/
+  |  |  |- home
+  |  |  |  |- config.js
+  |  |  |  |- controllers.js
+  |  |  |  |- directives.js
+  |  |  |  |- services.js
+  |  |  |  |- filters.js
+  |  |  |  |- views/
+  |  |  |- login
+  |  |  |- app.js
+  |  |  |- main-ctrl.js
+  |  |- styles/
+  |  |  |- main.styl
+  |- vendor(bower_components)/
   |  |- angular-bootstrap/
   |  |- bootstrap/
   |  |- placeholders/
   |- .bowerrc
   |- bower.json
-  |- build.config.js
   |- Gruntfile.js
-  |- module.prefix
-  |- module.suffix
+  |- index.html
   |- package.json
 ```
 
