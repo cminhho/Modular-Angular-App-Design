@@ -58,7 +58,7 @@ angular.module('app.third-party', [
 ]);
 
 // Lastly, define your "main" module and inject all other modules as dependencies
-angular.module('ClearOneApp', [
+angular.module('YourApp', [
     'app.third-party',
     'app.resources',
     'app.securities',
@@ -69,15 +69,15 @@ angular.module('ClearOneApp', [
 
 ```
 
-Creating a ClearOneApp Modules allows us to inject all our other modules which in turn allows each of our other modules to access each other
-The ClearOneApp also allows us to do routing and use ui-view in our index.html file:
+Creating a YourApp Modules allows us to inject all our other modules which in turn allows each of our other modules to access each other
+The YourApp also allows us to do routing and use ui-view in our index.html file:
 
 ```sh
 <!DOCTYPE HTML>
-<html lang="en-US" data-ng-app="ClearOneApp">
+<html lang="en-US" data-ng-app="YourApp">
 <head>
   <meta charset="UTF-8">
-  <title>ClearOne App</title>
+  <title>Your App</title>
 </head>
 <body data-ng-controller="MainCtrl">
     <div ui-view></div>
